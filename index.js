@@ -19,3 +19,14 @@ function animate() {
 }
 
 animate();
+
+window.addEventListener("keydown", (event) => {
+  const { key } = event;
+
+  switch (key) {
+    case "w":
+      if (player.velocity.y === 0) {
+        player.jump();
+      }
+  }
+});
