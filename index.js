@@ -4,12 +4,18 @@ const context = canvas.getContext("2d");
 canvas.width = 64 * 16;
 canvas.height = 64 * 9;
 
+const blockSize = 64;
+const columns = 16;
+
+const bidimensionalArray = createBidimensionalArray(collisionLevel1, columns);
+const collisionBlocks = createCollisonBlocks(bidimensionalArray, blockSize);
+
 const background = new Sprite({
+  imgSrc: "./assets/backgroundLevel1.png",
   position: {
     x: 0,
     y: 0,
   },
-  imgSrc: "./assets/backgroundLevel1.png",
 });
 
 const player = new Player();
@@ -23,6 +29,10 @@ function animate() {
   requestAnimationFrame(animate);
 
   background.draw();
+
+  for (const block of collisionBlocks) {
+    block.draw();
+  }
 
   player.draw();
   player.update();
