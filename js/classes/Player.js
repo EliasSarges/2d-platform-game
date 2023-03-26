@@ -27,6 +27,7 @@ class Player {
 
   update() {
     this.position.y += this.velocity.y;
+    this.position.x += this.velocity.x;
     this.sides.bottom = this.position.y + this.height;
 
     if (this.sides.bottom + this.velocity.y < canvas.height) {
