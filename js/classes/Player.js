@@ -17,7 +17,7 @@ class Player {
 
     this.collisionBlocks = collisionBlocks;
 
-    this.color = "red";
+    this.color = "black";
   }
 
   draw() {
