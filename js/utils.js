@@ -14,7 +14,7 @@ const createCollisonBlocks = (arrayBlocks, size) => {
 
   arrayBlocks.forEach((row, y) => {
     row.forEach((column, x) => {
-      if (column !== 292) {
+      if (column !== 1) {
         return;
       }
 

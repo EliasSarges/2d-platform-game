@@ -1,7 +1,7 @@
 window.addEventListener("keydown", (event) => {
   const { key } = event;
 
-  switch (key) {
+  switch (key.toLocaleLowerCase()) {
     case "w":
       if (player.velocity.y === 0) player.jump();
       break;
@@ -18,7 +18,7 @@ window.addEventListener("keydown", (event) => {
 window.addEventListener("keyup", (event) => {
   const { key } = event;
 
-  switch (key) {
+  switch (key.toLocaleLowerCase()) {
     case "a":
       keys.a.pressed = false;
       break;
