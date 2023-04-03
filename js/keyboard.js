@@ -1,29 +1,29 @@
 window.addEventListener("keydown", (event) => {
-  const { key } = event;
+  const { code } = event;
 
-  switch (key.toLocaleLowerCase()) {
-    case "w":
+  switch (code) {
+    case "Space":
       if (player.velocity.y === 0) player.jump();
       break;
 
-    case "a":
-      keys.a.pressed = true;
+    case "KeyA":
+      keys.left.pressed = true;
       break;
 
-    case "d":
-      keys.d.pressed = true;
+    case "KeyD":
+      keys.right.pressed = true;
   }
 });
 
 window.addEventListener("keyup", (event) => {
-  const { key } = event;
+  const { code } = event;
 
-  switch (key.toLocaleLowerCase()) {
-    case "a":
-      keys.a.pressed = false;
+  switch (code) {
+    case "KeyA":
+      keys.left.pressed = false;
       break;
 
-    case "d":
-      keys.d.pressed = false;
+    case "KeyD":
+      keys.right.pressed = false;
   }
 });

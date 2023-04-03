@@ -23,8 +23,8 @@ const player = new Player({
 });
 
 const keys = {
-  a: { pressed: false },
-  d: { pressed: false },
+  left: { pressed: false },
+  right: { pressed: false },
 };
 
 function animate() {
@@ -39,10 +39,10 @@ function animate() {
   player.draw();
   player.update();
 
-  if (keys.a.pressed) {
+  if (keys.left.pressed) {
     player.velocity.x = -5;
     //
-  } else if (keys.d.pressed) {
+  } else if (keys.right.pressed) {
     player.velocity.x = 5;
     //
   } else {
